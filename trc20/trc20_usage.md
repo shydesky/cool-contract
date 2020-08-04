@@ -1,8 +1,8 @@
 ## Deploy the contract 
 
 ### compile the byteCode and abi
-solc --bin trc20.sol  byteCode_string 
-solc --abi trc20.sol  abi_string
+`solc --bin trc20.sol`  (paste as the byteCode_string)  
+`solc --abi trc20.sol`  (paste as the abi_string)  
 
 ### deploy the contract using wallet-cli
 deployContract contract_name abi byteCode constructor parameters isHex fee_limit consume_user_resource_percent origin_energy_limit value token_value token_id
