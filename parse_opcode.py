@@ -156,8 +156,8 @@ def parse(data):
             op = data[index: index+2]
             tmp = op_dict.get(op)
             if tmp is None:
-                print index
-            pc = hex((index) / 2)[2:].rjust(4,"0")
+                print(index)
+            pc = hex(int(index / 2))[2:].rjust(4,"0")
             index = index + 2
             param = ""
             if tmp.code.find("PUSH") >= 0:
@@ -167,6 +167,6 @@ def parse(data):
             ret.append(pc + "|  " + "{:>15s}".format(tmp.code) + "    " + "{:<10s}".format(param))
             
     except Exception as e:
-        print e
+        print(e)
     return ret
     
